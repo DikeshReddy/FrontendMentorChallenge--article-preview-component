@@ -1,0 +1,234 @@
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 9px;
+  width: 85%;
+  max-width: 730px;
+}
+
+.blog-image {
+  border-radius: inherit;
+  background-image: url(./images/drawers.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 34px;
+}
+
+.heading {
+  padding-inline: 32px;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.para {
+  padding-inline: 32px;
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+  padding-bottom: 18px;
+}
+
+.profile-section {
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 32px;
+  padding-block: 20px;
+  position: relative;
+}
+
+.profile-content {
+  display: flex;
+  gap: 16px;
+}
+.name {
+  font-size: 1rem;
+  color: hsl(217, 19%, 35%);
+}
+
+.date {
+  color: hsl(214, 17%, 51%);
+}
+
+.profile_image {
+  max-height: 40px;
+  border-radius: 100px;
+}
+
+.share-content {
+  display: flex;
+  gap: 16px;
+}
+
+.share-content p {
+  letter-spacing: 4px;
+}
+
+.share-button {
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.dark-bg {
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+}
+
+.dark-theme {
+  fill: white;
+  background-color: hsl(212, 23%, 69%);
+}
+
+@media (min-width: 630px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+  .blog-image {
+    border-radius: 10px 0 0 10px;
+    width: 50%;
+  }
+  .content {
+    padding-inline: 40px;
+  }
+  .heading {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .para {
+    padding: 0;
+  }
+  .profile-section {
+    padding: 18px 0 34px 0;
+  }
+  .floating-share-menu {
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    top: -65px;
+    right: -100px;
+    padding: 18px 36px 18px 36px;
+    letter-spacing: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: hsl(217, 19%, 35%);
+  }
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid hsl(217, 19%, 35%);
+    position: absolute;
+    top: 100%;
+    left: 48%;
+  }
+}
+
+.none {
+  display: none;
+}
